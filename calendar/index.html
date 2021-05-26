@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JaGH's Bazaar Flipper</title>
+		<script src="js/sbevents.js"></script>
+		<link rel="stylesheet" href="css/calc.css">
+	</head>
+	<body onload="showNextEvents()">
+		<div class="header">
+			<div>JaGH's Skyblock Calendar</div>
+		</div>
+		<div id="events">
+			<div id="sbYear"></div>
+			<div style="text-align:center;">
+				<div>
+					<span class="legend-cont">
+						<span class="legend" style="background-color:#00aaff;"></span>
+						<span>Soon</span>
+					</span>
+					<span class="legend-cont">
+						<span class="legend" style="background-color:#aaff00;"></span>
+						<span>Active</span>
+					</span>
+					<input id="fishFestCheck" type="checkbox" onclick="FISHING_FESTIVAL = this.checked; showNextEvents(true);">
+					<span>Fishing Festival</span>
+				</div>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>Event Name</th>
+						<th>Start</th>
+						<th>End</th>
+						<th>Time left</th>
+						<th>Season</th>
+						<th>Skyblock Date</th>
+					</tr>
+				</thead>
+				<tbody id="tbEvents">
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
