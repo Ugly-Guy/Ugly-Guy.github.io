@@ -1,0 +1,24 @@
+.common{
+	color: #FFFFFF;
+}
+.uncommon{
+	color: #55FF55;
+}
+.rare{
+	color:#5555FF;
+}
+.epic{
+	color: #AA00AA;
+}
+.legendary{
+	color:#FFAA00;
+}
+.mythic{
+	color: #FF55FF;
+}
+.special{
+	color: #FF5555;
+}
+.very_special{
+	color:#AA0000;
+}
