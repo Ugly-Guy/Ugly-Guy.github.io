@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta property="og:title" content="Damage Calculator [by Generic_Hero]">
+		<meta property="og:description" content="The calculator has a weird shape 🍆">
+		<meta property="og:image" content="https://crafatar.com/avatars/9947ca8df79f45fc86d3246823fff11b?size=32&overlay">
+		<title>JaGH's Damage Calculator</title>
+		<script src="js/damageCalculator.js" defer></script>
+		<link rel="stylesheet" href="css/calc.css">
+	</head>
+	<body>
+		<div class="container">
+			<fieldset class="stats">
+				<legend>Stats</legend>
+				<ul>
+					<label>Combat Lvl:</label>
+					<input type="number" value="60">
+				</ul>
+				<ul>
+					<label>Damage:</label>
+					<input type="number" value="1643">
+				</ul>
+				<ul>
+					<label>Strength:</label>
+					<input type="number" value="1190">
+				</ul>
+				<ul>
+					<label>Crit Damage:</label>
+					<input type="number" value="885">
+				</ul>
+				<ul>
+					<label>Speed:</label>
+					<input type="number" value="400">
+				</ul>
+				<ul>
+					<label>Weapon Bonus:</label>
+					<input type="number" value="0">
+				</ul>
+				<ul>
+					<label>Armor Bonus:</label>
+					<input type="number" value="0">
+				</ul>
+			</fieldset> 
+			<fieldset class="enchantments">
+				<legend>Enchantments</legend>
+				<ul>
+					<label>
+						<select>
+							<option value="5" selected>Sharpness</option>
+							<option value="8">Smite</option>
+							<option value="8">Bane of Arthropods</option>
+						</select>
+					</label>
+					<input type="number" value="0">
+					<span>0</span>
+				</ul>
+				<ul>
+					<label>
+						<select>
+							<option value="25" selected>First Strike</option>
+							<option value="10">Triple Strike</option>
+						</select>
+					</label>
+					<input type="number" value="0">
+					<span>0</span>
+				</ul>
+				<ul>
+					<label>Giant Killer:</label>
+					<input type="number" value="0">
+					<span>0</span>
+				</ul>
+				<ul>
+					<label>Prosecute:</label>
+					<input type="number" value="0">
+					<span>0</span>
+				</ul>
+			</fieldset> 
+			<div class="results">
+				<fieldset>
+					<legend>Old Damage</legend>
+					<div>
+						<p>Warden Helmet: <b class="result">420,600,200</b></p>
+					</div>
+					<div>
+						<p>No Warden Helmet: <b class="result">420</b></p>
+					</div>
+				</fieldset>
+			
+				<fieldset>
+					<legend>New Damage</legend>
+					<div>
+						<p>Warden Helmet: <b class="result">420</b></p>
+					</div>
+					<div>
+						<p>No Warden Helmet: <b class="result">420</b></p>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<div class="notes">
+			<div>
+				<span>Armor Bonus</span> and <span>Weapon Bonus</span> are weird, sometimes your Armor gives you Weapon Bonus and vice versa<br>
+				Also remember this: if you item says <span>"Deal x% damage"</span> it means <span>+(x-100)% damage</span><br>
+				Example 1: <span>Reaper Armor</span> (Deal <span>200% damage</span> to zombies) means <span>+100% damage</span> to zombies<br>
+				Example 2: <span>Axe of the Shredder</span> (Deal <span>+250% damage</span> to zombies) is <span>+250% damage</span> to zombies, just like the description<br>
+				The difference is the "<span>+</span>" symbol, remember that<br>
+				Also, those items are good example of the first line, AotS gives you Armor Bonus for some reason<br>
+			</div>
+		</div>
+	</body>
+</html>
