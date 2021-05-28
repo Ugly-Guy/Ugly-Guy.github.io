@@ -1,0 +1,81 @@
+body {
+	background-color: #444;
+	color:#fff;
+	--shadow_col: #1f1f1f;
+}
+.body-cont{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 500px;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  background-color: #555;
+  color: #fff;
+  border: white 1px solid;
+  width: 100px;
+  text-align: center;
+  font-weight: bold;
+}
+fieldset{
+	border-color: #fa0;
+}
+
+.stats, .enchantments{
+	max-width: max-content;
+	text-align: right;
+}
+
+.results{
+	text-align: left;
+}
+
+.result{
+	color: #FFAA00;
+}
+
+
+.notes {
+	color: #aaa;
+	text-align: left;
+	justify-content: center;
+	display: flex;
+}
+
+.notes span{
+	color: #fa0;
+}
+
+.github-link{
+	text-align: center;
+	margin-block: 20px
+}
+
+.github-link a{
+	text-decoration: none;
+	color: #fff;
+	outline: 2px solid #fff;
+	padding: 15px;
+	background-color:#777;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.github-link img {
+	vertical-align: middle;
+}
