@@ -3,6 +3,13 @@ body {
 	color:#fff;
 	--shadow_col: #1f1f1f;
 }
+.body-cont{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 500px;
+}
+
 .container{
 	display: flex;
 	justify-content: center;
@@ -45,7 +52,6 @@ fieldset{
 
 .notes {
 	color: #aaa;
-	margin-top: 40px;
 	text-align: left;
 	justify-content: center;
 	display: flex;
@@ -53,4 +59,23 @@ fieldset{
 
 .notes span{
 	color: #fa0;
+}
+
+.github-link{
+	text-align: center;
+	margin-block: 20px
+}
+
+.github-link a{
+	text-decoration: none;
+	color: #fff;
+	outline: 2px solid #fff;
+	padding: 15px;
+	background-color:#777;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.github-link img {
+	vertical-align: middle;
 }
