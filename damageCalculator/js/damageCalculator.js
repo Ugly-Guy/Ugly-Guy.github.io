@@ -29,23 +29,23 @@ function prettyNumber(n){
 
 function printDamage(){
 	let inputs = document.querySelectorAll('input');
-	COMBAT_LVL = Number(inputs[0].value);
-	WeaponDMG = Number(inputs[1].value);
-	Strength = Number(inputs[2].value);
-	CritDamage = Number(inputs[3].value);
-	Speed = Number(inputs[4].value);;
-	WeaponBonus = Number(inputs[5].value);;
-	ArmorBonus = Number(inputs[6].value);;
+	COMBAT_LVL = Number(inputs[4].value);
+	WeaponDMG = Number(inputs[5].value);
+	Strength = Number(inputs[6].value);
+	CritDamage = Number(inputs[7].value);
+	Speed = Number(inputs[8].value);;
+	WeaponBonus = Number(inputs[9].value);;
+	ArmorBonus = Number(inputs[10].value);;
 
 	let enchantments = document.querySelectorAll('.enchantments select');
-	let sharp = Number(enchantments[0].value) * Number(inputs[7].value);
-	inputs[7].parentElement.lastElementChild.innerHTML = ` +${sharp}%`;
-	let strike = Number(enchantments[1].value) * Number(inputs[8].value);
-	inputs[8].parentElement.lastElementChild.innerHTML = ` +${strike}%`;
+	let sharp = Number(enchantments[0].value) * Number(inputs[0].value);
+	inputs[0].parentElement.lastElementChild.innerHTML = ` +${sharp}%`;
+	let strike = Number(enchantments[1].value) * Number(inputs[1].value);
+	inputs[1].parentElement.lastElementChild.innerHTML = ` +${strike}%`;
 	let giantk = Number(inputs[9].value) ? 25 : 0;
-	inputs[9].parentElement.lastElementChild.innerHTML = ` +${giantk}%`;
+	inputs[2].parentElement.lastElementChild.innerHTML = ` +${giantk}%`;
 	let prosecute = Number(inputs[10].value) ? 35 : 0;
-	inputs[10].parentElement.lastElementChild.innerHTML = ` +${prosecute}%`;
+	inputs[3].parentElement.lastElementChild.innerHTML = ` +${prosecute}%`;
 
 	EnchantMult = sharp + strike + giantk + prosecute;
 
@@ -65,3 +65,23 @@ function printDamage(){
 printDamage();
 document.querySelector('.stats').oninput = printDamage;
 document.querySelector('.enchantments').oninput = printDamage;
+
+
+//Jerry
+function jerry(){
+	let stats = document.querySelector('.stats')
+	let ench = document.querySelector('.enchantments')
+	let results = document.querySelector('.results')
+
+	stats.classList.toggle('jerry')
+	ench.classList.toggle('jerry')
+	results.classList.toggle('jerry')
+
+	localStorage.jerry = Number(!parseInt(localStorage.jerry))
+}
+
+if(Number(localStorage.jerry)){
+	document.querySelector('.stats').classList.add('jerry')
+	document.querySelector('.enchantments').classList.add('jerry')
+	document.querySelector('.results').classList.add('jerry')
+}

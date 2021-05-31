@@ -40,11 +40,18 @@ fieldset{
 	max-width: max-content;
 	text-align: right;
 }
-
+.enchantments.jerry{
+	background: #be876f;
+}
+.stats.jerry{
+	background: #83625b;
+}
 .results{
 	text-align: left;
 }
-
+.results.jerry fieldset{
+	background:#36251d;
+}
 .result{
 	color: #FFAA00;
 }
@@ -61,12 +68,12 @@ fieldset{
 	color: #fa0;
 }
 
-.github-link{
+.buttons{
 	text-align: center;
 	margin-block: 20px
 }
 
-.github-link a{
+.buttons a{
 	text-decoration: none;
 	color: #fff;
 	outline: 2px solid #fff;
@@ -74,8 +81,19 @@ fieldset{
 	background-color:#777;
 	border-radius: 10px;
 	font-weight: bold;
+	margin: 0px 20px;
 }
 
-.github-link img {
+.buttons img {
+	vertical-align: middle;
+}
+
+
+.jerryIcon{
+	display: inline-block;
+	width: 16px;
+	height: 32px;
+	background-image: url(jerry.png);
+	background-size: contain;
 	vertical-align: middle;
 }
