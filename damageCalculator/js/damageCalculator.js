@@ -9,7 +9,7 @@ var COMBAT_BOOST = ()=>{
 }
 function baseDamage(old, WARDEN_BONUS){
 	 //Warden Helmet says it increases BaseDamage, I confirmed this ingame
-	 let warden = (1+WARDEN_BONUS*Math.floor(Speed/50)/10)
+	 let warden = (1+WARDEN_BONUS*Math.floor(Speed/50)/10*old)
 	if(old) return (5 + WeaponDMG + Strength/5) * (1 + Strength/100) * warden; //Old Calculations
 	return (5 + WeaponDMG) * (1 + Strength/100) * warden;
 }
@@ -17,7 +17,8 @@ function baseDamage(old, WARDEN_BONUS){
 
 function damageCalc(old=false, WARDEN_BONUS=false){
 	var BaseDamage = baseDamage(old, WARDEN_BONUS);
-	var DamageMultiplier = 1 + COMBAT_BOOST() + EnchantMult/100 + WeaponBonus/100;
+	var newWarden = (WARDEN_BONUS*Math.floor(Speed/50)/5*!old);
+	var DamageMultiplier = 1 + COMBAT_BOOST() + EnchantMult/100 + WeaponBonus/100 + newWarden;
 
 	return prettyNumber(BaseDamage * DamageMultiplier * (1+CritDamage/100) * (1+ArmorBonus/100))
 }
